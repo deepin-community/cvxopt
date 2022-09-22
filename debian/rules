@@ -1,0 +1,33 @@
+#! /usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+bindnow
+
+DH_VERBOSE := 1
+
+export PYBUILD_NAME=cvxopt
+export PYBUILD_TEST_ARGS=-s tests
+
+%:
+	dh $@ --buildsystem=pybuild
+
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -rf doc/build cvxopt.egg-info
+
+override_dh_install:
+	dh_install
+	find debian/python*-cvxopt -name cvxopt -type d -empty -delete
+
+override_dh_auto_build-indep:
+	# $(pyrun) 'make --directory=doc html latex'
+	make --directory=doc html latex
+	make --directory=doc/build/latex all-pdf
+
+override_dh_auto_test-indep:
+
+override_dh_fixperms-indep:
+	dh_fixperms -i
+	find debian/python-$(PYBUILD_NAME)-doc/usr/share/doc/python*/examples -name "*.py" -exec chmod -x \{\} \;
+
+override_dh_compress:
+	dh_compress --exclude=.pdf

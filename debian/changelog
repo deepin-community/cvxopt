@@ -1,0 +1,435 @@
+cvxopt (1.2.7+dfsg-2) unstable; urgency=medium
+
+  * Team upload
+  * Add Build-Depends-Indep on tex-gyre
+
+ -- Graham Inggs <ginggs@debian.org>  Tue, 19 Oct 2021 13:00:26 +0000
+
+cvxopt (1.2.7+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Helmut Grohne ]
+  * Separate documentation dependencies to B-D-I (Closes: #983374)
+
+  [ Graham Inggs ]
+  * Update debian/watch
+  * New upstream release
+  * Drop fix-typos.patch, included upstream
+  * Bump Standards-Version to 4.6.0, no changes
+
+ -- Graham Inggs <ginggs@debian.org>  Tue, 19 Oct 2021 11:13:39 +0000
+
+cvxopt (1.2.5+dfsg-3) unstable; urgency=medium
+
+  * Team upload
+  * Do not try to run tests during arch:all build (Closes: #972271)
+
+ -- Graham Inggs <ginggs@debian.org>  Thu, 15 Oct 2020 17:29:19 +0000
+
+cvxopt (1.2.5+dfsg-2) unstable; urgency=medium
+
+  * Add build dependency on dvipng to generate equations in
+    HTML documentation (Closes: #947605)
+  * Run unittests at build time
+  * Run unittests during autopkgtest
+  * Fix some typos, thanks Lintian
+
+ -- Graham Inggs <ginggs@debian.org>  Thu, 15 Oct 2020 12:40:35 +0000
+
+cvxopt (1.2.5+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+    - Python 3.9 and PyPy compatibility update (Closes: #972008)
+  * Refresh patches
+  * Switch to debhelper 13
+  * Set Rules-Requires-Root: no
+  * Remove trailing whitespace from changelog and rules
+  * Bump Standards-Version to 4.5.0, no changes
+
+ -- Graham Inggs <ginggs@debian.org>  Tue, 13 Oct 2020 17:21:29 +0000
+
+cvxopt (1.2.3+dfsg-2) unstable; urgency=medium
+
+  * Team upload
+
+  [ Adam Conrad ]
+  * multiarch.diff: Fix build with multiarch on !amd64 (Closes: #934382)
+
+  [ Graham Inggs ]
+  * Stop building python-cvxopt (Closes: #936357)
+  * Update debian/python-cvxopt-doc.doc-base
+
+ -- Graham Inggs <ginggs@debian.org>  Sun, 17 Nov 2019 11:29:33 +0000
+
+cvxopt (1.2.3+dfsg-1) unstable; urgency=medium
+
+  [ Jelmer Vernooĳ ]
+  * Remove unnecessary X-Python{,3}-Version field in debian/control.
+  * Trim trailing whitespace.
+
+  [ Andreas Tille ]
+  * Do not Build-Depend texlive-generic-extra
+    Closes: #933281
+  * New upstream version
+  * debhelper-compat 12
+  * Standards-Version: 4.4.0
+  * Build-Depends: python*-setuptools
+
+ -- Andreas Tille <tille@debian.org>  Mon, 29 Jul 2019 19:43:03 +0200
+
+cvxopt (1.1.9+dfsg-3) unstable; urgency=medium
+
+  * Build-Depends: s/python-sphinx*/python3-sphinx*/
+  * Testsuite: autopkgtest-pkg-python
+  * Standards-Version: 4.1.4
+  * Point Vcs fields to salsa.debian.org
+
+ -- Andreas Tille <tille@debian.org>  Mon, 16 Apr 2018 15:03:15 +0200
+
+cvxopt (1.1.9+dfsg-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Julian Gilbey ]
+  * Fix breakage of earlier version by adding Replaces+Breaks
+    python-cvxopt (<< 1.1.8) to -doc package (closes: #859579)
+
+  [ Sébastien Villemot ]
+  * Update homepage.
+  * Use https for Format field of d/copyright.
+  * Remove useless build-dependency on libatlas-base-dev.
+  * python{,3}-cvxopt now suggest python-cvxopt-doc (Closes: #858106).
+  * Add a build-dependency on latexmk, required to build with Sphinx 1.6
+    (Closes: #872170).
+  * Drop glpk-4.49.diff, no longer needed (Closes: #840159).
+  * Support nodoc flag of DEB_BUILD_OPTIONS.
+  * Bump Standards-Version to 4.0.1.
+
+ -- Sébastien Villemot <sebastien@debian.org>  Mon, 21 Aug 2017 16:37:24 +0200
+
+cvxopt (1.1.9+dfsg-1) unstable; urgency=medium
+
+  * New upstream version
+  * debhelper 10
+  * drop Soeren Sonnenburg from Uploaders
+  * delete empty dirs usr/cvxopt from binary package
+
+ -- Andreas Tille <tille@debian.org>  Mon, 19 Jun 2017 17:00:03 +0200
+
+cvxopt (1.1.8+dfsg-1) experimental; urgency=medium
+
+  * New upstream version
+    Closes: #708347
+  * Team maintenance in Debian Science team
+  * DEP5
+  * cme fix dpkg-control
+  * debhelper 9
+  * debian/rules: dh + pybuild
+  * exclude suitesparse code copy
+    Closes: #719804
+  * hardening=+bindnow
+  * Python3 + doc package
+    Closes: #822557
+
+ -- Andreas Tille <tille@debian.org>  Wed, 20 Jul 2016 14:15:31 +0200
+
+cvxopt (1.1.4-1.5) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Add build dependency on texlive-generic-extra for iftex.sty.
+    (closes: #830343)
+  * Update watch file for GitHub releases.
+    (closes: #780307)
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sat, 16 Jul 2016 17:47:04 +0200
+
+cvxopt (1.1.4-1.4) unstable; urgency=medium
+
+  * Non-maintainer upload.
+
+  [ Bas Couwenberg ]
+  * Update build dependencies for GSL 2, change libgsl0-dev to libgsl-dev.
+    Closes: #807196
+
+ -- Mattia Rizzolo <mattia@debian.org>  Tue, 26 Jan 2016 11:53:51 +0000
+
+cvxopt (1.1.4-1.3) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Fix glpk-4.49.diff: Link the lpx emulation file, fix the #if activation
+    test. This fixes "undefined symbol: lpx_create_prob" bugs. (Closes: #780251)
+
+ -- Jean-Michel Nirgal Vourgère <jmv_deb@nirgal.com>  Wed, 11 Mar 2015 23:00:40 +0100
+
+cvxopt (1.1.4-1.2) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * glpk-4.49.diff: fix GLPK version detection (the wrong macro was used).
+    (Closes: #731445)
+
+ -- Sébastien Villemot <sebastien@debian.org>  Fri, 06 Dec 2013 17:38:28 +0100
+
+cvxopt (1.1.4-1.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * glpk-4.49.diff: new patch, fixes FTBFS against recent versions of GLPK
+    (Closes: #714368)
+
+ -- Sébastien Villemot <sebastien@debian.org>  Thu, 15 Aug 2013 16:12:35 +0200
+
+cvxopt (1.1.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Thu, 19 Jan 2012 08:18:18 +0100
+
+cvxopt (1.1.3-2) unstable; urgency=low
+
+  * Bump standards version to 3.9.2 (no changes required).
+  * Convert package to use dh_python2 (Closes: #616783).
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Fri, 22 Jul 2011 17:01:34 +0200
+
+cvxopt (1.1.3-1) unstable; urgency=low
+
+  * New upstream release.
+    - Install header files (Closes: #604894)
+    - Fixes build with Sphinx 1.0 (Closes: #608841).
+  * Bump standards version to 3.9.1
+    - Convert package to format 3.0 (quilt)
+    - Remove debian/README.source
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Wed, 12 Jan 2011 15:04:47 +0100
+
+cvxopt (1.1.2-1) unstable; urgency=low
+
+  [ Torsten Werner ]
+  * Remove myself from Uploaders as discussed with Sören
+
+  [ Soeren Sonnenburg ]
+  * New upstream release.
+    - Now uses python-spinx to build documentation.
+    - Refresh patches.
+    - Require at least python 2.5.
+    - Require lapack and blas.
+  * Bump standards version to 3.8.3 (no changes required).
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Sun, 20 Dec 2009 07:09:46 +0100
+
+cvxopt (1.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Refresh patches.
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Sat, 25 Oct 2008 23:14:39 +0200
+
+cvxopt (1.0-3) unstable; urgency=low
+
+  * Update my email address to sonne@debian.org.
+  * Introduce README.source and patch target to make package compliant to
+    standards version 3.8.0.'
+
+ -- Soeren Sonnenburg <sonne@debian.org>  Sun, 14 Sep 2008 16:37:10 +0200
+
+cvxopt (1.0-2) unstable; urgency=low
+
+  [ Torsten Werner ]
+  * Do not run quilt in $(DEB_SRCDIR) anymore. (Closes: #485142)
+  * Refresh all patches.
+
+  [ Soeren Sonnenburg ]
+  * Use Science/Mathematics as doc-base section.
+
+ -- Torsten Werner <twerner@debian.org>  Wed, 11 Jun 2008 20:41:57 +0200
+
+cvxopt (1.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Fix build for python2.4
+  * Add a README.source, documenting that we are using quilt to add some
+  patches.
+
+ -- Soeren Sonnenburg <debian@nn7.de>  Tue, 29 Apr 2008 06:55:27 +0200
+
+cvxopt (0.9.3-1) unstable; urgency=low
+
+  * new upstream release (Closes: #471368)
+  * Remove the former +nogs1 suffix.
+  * Update patch doc.diff.
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 17 Mar 2008 20:48:08 +0100
+
+cvxopt (0.9.2+nogs1-1) unstable; urgency=low
+
+  * Do not generate .pdf images on the fly but on obtaining source package to
+    workaround failing epstopdf on some architectures
+
+ -- Soeren Sonnenburg <debian@nn7.de>  Sat, 23 Feb 2008 21:46:20 +0100
+
+cvxopt (0.9.2-2) unstable; urgency=low
+
+  [ Soeren Sonnenburg ]
+  * Change Build-Depends of atlas, blas and lapack to match gfortran
+    transition (Closes: #463938)
+  * Tighten Build-Depends on dsdp >= 5.8-3
+
+  [ Torsten Werner ]
+  * Remove atlas support temporarily.
+
+ -- Torsten Werner <twerner@debian.org>  Fri, 08 Feb 2008 22:26:36 +0100
+
+cvxopt (0.9.2-1) unstable; urgency=low
+
+  [ Soeren Sonnenburg ]
+  * New upstream version
+  * Generate indexed pdf
+
+  [ Torsten Werner ]
+  * Add Build-Depends: texlive-latex-extra.
+  * Change Build-Depends: gs-gpl to ghostscript.
+  * Fix white space in doc-base file.
+
+ -- Torsten Werner <twerner@debian.org>  Wed, 02 Jan 2008 20:19:49 +0100
+
+cvxopt (0.9.1-4) unstable; urgency=low
+
+  [ Soeren Sonnenburg ]
+  * add lapack3-dev to build depends for arm architecture
+
+  [ Torsten Werner ]
+  * Change Build-Depends: fftw3-dev to libfftw3-dev.
+
+ -- Torsten Werner <twerner@debian.org>  Wed, 19 Dec 2007 16:53:24 +0100
+
+cvxopt (0.9.1-3) unstable; urgency=low
+
+  * Really enable GSL support.
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 17 Dec 2007 19:39:29 +0100
+
+cvxopt (0.9.1-2) unstable; urgency=low
+
+  [ Soeren Sonnenburg ]
+  * Enable gsl support and remove obsolete README.Debian (Closes: #456723)
+
+  [ Torsten Werner ]
+  * Remove Depends: lapack3-dev.
+  * Support newer versions of dpkg-shlibdeps.
+  * Update Homepage and Vcs headers in debian/control.
+  * Change Standards-Version: 3.7.3.
+  * Remove the full text of GPL-3 from debian/copyright because base-files
+    ships it now.
+
+ -- Torsten Werner <twerner@debian.org>  Mon, 17 Dec 2007 19:18:11 +0100
+
+cvxopt (0.9.1-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Soeren Sonnenburg <debian@nn7.de>  Sun, 25 Nov 2007 17:32:57 +0000
+
+cvxopt (0.9-3) unstable; urgency=low
+
+  [ Soeren Sonnenburg ]
+  * Fix FTBFS if build twice in a row. (Closes: #442537)
+
+  [ Torsten Werner ]
+  * Change Build-Depends: gs-common to gs-gpl.
+
+ -- Torsten Werner <twerner@debian.org>  Wed, 19 Sep 2007 20:57:04 +0200
+
+cvxopt (0.9-2) unstable; urgency=low
+
+  * add lapack3-dev to build depends for arm architecture
+
+ -- Soeren Sonnenburg <debian@nn7.de>  Thu, 16 Aug 2007 07:49:27 +0200
+
+cvxopt (0.9-1) unstable; urgency=low
+
+  * new upstream version
+  * build pdf version of documentation and add doc-base support
+
+ -- Soeren Sonnenburg <debian@nn7.de>  Thu, 09 Aug 2007 21:08:44 +0200
+
+cvxopt (0.8.2-3) unstable; urgency=low
+
+  * add build dependency on libdsdp-dev and enable the dsdp semidefinite
+  programming solver
+
+ -- Soeren Sonnenburg <debian@nn7.de>  Sun, 5 Aug 2007 12:10:22 +0200
+
+cvxopt (0.8.2-2) unstable; urgency=low
+
+  * disable atlas3-base-dev build dependency on arm as it is unavailable and
+  works without
+
+ -- Soeren Sonnenburg <debian@nn7.de>  Tue, 31 Jul 2007 11:34:00 +0200
+
+cvxopt (0.8.2-1) unstable; urgency=low
+
+  [ Soeren Sonnenburg ]
+  * First upload to Debian. (Closes: #431233)
+  * Acknowledge ubuntu packaging from upstream.
+  * Switch to pycentral.
+
+  [ Torsten Werner ]
+  * Switch to quilt and more debhelper tools.
+  * Fix Build-Depends.
+
+ -- Torsten Werner <twerner@debian.org>  Wed,  4 Jul 2007 21:33:44 +0200
+
+cvxopt (0.8-3) unstable; urgency=low
+
+  * Release of version 0.8.2
+
+ -- Joachim Dahl <joachim@kom.aau.dk>  Tue, 6 Feb 2007 19:05:00 +0100
+
+cvxopt (0.8-2) unstable; urgency=low
+
+  * Release of version 0.8.1
+
+ -- Joachim Dahl <joachim@kom.aau.dk>  Wed, 1 Nov 2006 20:05:00 +0100
+
+cvxopt (0.8-1) unstable; urgency=low
+
+  * Release of version 0.8
+
+ -- Joachim Dahl <joachim@kom.aau.dk>  Tue, 19 Sep 2006 20:38:43 +0100
+
+cvxopt (0.7-2) unstable; urgency=low
+
+  * Release of version 0.7.1
+
+ -- Joachim Dahl <joachim@kom.aau.dk>  Mon, 31 Jul 2006 19:46:43 +0100
+
+cvxopt (0.7-1) unstable; urgency=low
+
+  * Release of version 0.7.
+
+ -- Joachim Dahl <joachim@kom.aau.dk>  Sat, 22 Apr 2006 10:00:00 -0700
+
+cvxopt (0.6-1) unstable; urgency=low
+
+  * Release of version 0.6.
+
+ -- Joachim Dahl <joachim@kom.aau.dk>  Wed, 28 Dec 2005 09:19:00 -0700
+
+cvxopt (0.5-2) unstable; urgency=low
+
+  * Small bugfixes.
+
+ -- Joachim Dahl <joachim@kom.aau.dk>  Fri, 3 Nov 2005 23:01:49 -0700
+
+cvxopt (0.5-1) unstable; urgency=low
+
+  * Release of version 0.5.
+
+ -- Joachim Dahl <joachim@kom.aau.dk>  Fri, 21 Oct 2005 11:49:09 -0700
+
+cvxopt (0.4-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Joachim Dahl <joachim@ee.ucla.edu>  Thu, 19 May 2005 11:49:09 -0700

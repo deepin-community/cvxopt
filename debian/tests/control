@@ -1,0 +1,3 @@
+Tests: unittest
+Depends: python3-cvxopt, python3-all
+Restrictions: allow-stderr

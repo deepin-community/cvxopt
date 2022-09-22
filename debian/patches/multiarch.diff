@@ -1,0 +1,21 @@
+Description: Fix build with multiarch on !amd64
+Author: Adam Conrad <adconrad@ubuntu.com>
+Bug-Debian: https://bugs.debian.org/934382
+Forwarded: not-needed
+Last-Update: 2019-10-20
+
+--- a/setup.py
++++ b/setup.py
+@@ -58,9 +58,10 @@
+     SUITESPARSE_LIB_DIR = '/usr/local/lib'
+     SUITESPARSE_INC_DIR = '/usr/local/include'
+ else:
+-    if glob("/usr/lib/x86_64-linux-gnu/libsuitesparse*"):
++    MULTIARCH = os.popen('dpkg-architecture -qDEB_HOST_MULTIARCH').read().strip()
++    if glob("/usr/lib/" + MULTIARCH + "/libsuitesparse*"):
+         # Ubuntu/Debian
+-        SUITESPARSE_LIB_DIR = "/usr/lib/x86_64-linux-gnu"
++        SUITESPARSE_LIB_DIR = "/usr/lib/" + MULTIARCH
+         SUITESPARSE_INC_DIR = "/usr/include/suitesparse"
+     elif glob("/usr/lib64/libsuitesparse*"):
+         # CentOS/Fedora/RedHat
